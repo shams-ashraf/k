@@ -1,0 +1,14 @@
+streamlit
+PyMuPDF>=1.24.0  
+sentence-transformers
+chromadb==0.4.15
+requests
+langdetect  
+python-docx
+pytesseract  
+Pillow
+opencv-python-headless
+pymupdf-layout==0.0.15
+deep-translator
+langdetect
+langid
