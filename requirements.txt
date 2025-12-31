@@ -8,7 +8,7 @@ python-docx
 pytesseract  
 Pillow
 opencv-python-headless
-pymupdf-layout==0.0.15
+pymupdf-layout 1.26.6
 deep-translator
 langdetect
 langid
