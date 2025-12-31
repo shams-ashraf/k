@@ -16,7 +16,7 @@ load_dotenv()
 DetectorFactory.seed = 0
 
 PDF_PASSWORD = os.getenv("PDF_PASSWORD", "")
-DOCS_FOLDER = r"C:\Users\DELL\Desktop\lasst-main\documents"
+DOCS_FOLDER = "/mount/src/c/documents"
 CACHE_FOLDER = os.getenv("CACHE_FOLDER", "./cache")
 TESSDATA_PATH = os.getenv("TESSDATA_PATH")
 
@@ -196,7 +196,7 @@ def extract_pdf_detailed(filepath):
             textpage = page.get_textpage_ocr(
                 flags=fitz.TEXT_PRESERVE_LIGATURES | fitz.TEXT_PRESERVE_WHITESPACE,
                 full=True,
-                tessdata=r"C:\Program Files\Tesseract-OCR\tessdata"
+                tessdata=TESSDATA_PATH
                 
             )
             text = page.get_text("text", textpage=textpage)
@@ -442,4 +442,5 @@ def extract_txt_detailed(filepath):
 def get_files_from_folder():
     return glob.glob(os.path.join(DOCS_FOLDER, "*.[pP][dD][fF]")) + \
            glob.glob(os.path.join(DOCS_FOLDER, "*.[dD][oO][cC][xX]")) + \
+
            glob.glob(os.path.join(DOCS_FOLDER, "*.txt"))
