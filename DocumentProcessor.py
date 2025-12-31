@@ -439,9 +439,10 @@ def extract_txt_detailed(filepath):
     
     return file_info, None
     
+    
 def get_files_from_folder():
-    return glob.glob(os.path.join(DOCS_FOLDER, "*.[pP][dD][fF]")) + 
-           glob.glob(os.path.join(DOCS_FOLDER, "*.[dD][oO][cC][xX]")) + 
-
+    return glob.glob(os.path.join(DOCS_FOLDER, "*.[pP][dD][fF]")) + \
+           glob.glob(os.path.join(DOCS_FOLDER, "*.[dD][oO][cC][xX]")) + \
            glob.glob(os.path.join(DOCS_FOLDER, "*.txt"))
+
 
