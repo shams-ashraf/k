@@ -14,7 +14,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 CACHE_FOLDER = os.getenv("CACHE_FOLDER", "./cache")
-DOCS_FOLDER = r"C:\Users\DELL\Desktop\hhhhhhhhhhhhhhh\documents"
+DOCS_FOLDER = "/mount/src/k/documents"
 TESSERACT_PATH = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 PDF_PASSWORD = os.getenv("PDF_PASSWORD", "mbe2025")
 
@@ -549,3 +549,4 @@ def extract_pdf_detailed(pdf_path: str):
         if fitz_doc:
             fitz_doc.close()
         return None, str(e)
+
