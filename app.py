@@ -12,8 +12,6 @@ from DocumentProcessor import (
     get_file_hash,
     load_cache,
     extract_pdf_detailed,
-    extract_docx_detailed,
-    extract_txt_detailed,
     save_cache
 )
 from ChatEngine import get_embedding_function, answer_question_with_groq
@@ -94,10 +92,6 @@ else:
                 st.info(f"🔄 Processing & translating: {name} ...") 
                 if ext == "pdf":
                     info, error = extract_pdf_detailed(path)
-                elif ext in ["doc", "docx"]:
-                    info, error = extract_docx_detailed(path)
-                elif ext == "txt":
-                    info, error = extract_txt_detailed(path)
                 else:
                     st.warning(f"⚠️ Skipped unsupported file: {name}")
                     continue
