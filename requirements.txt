@@ -9,7 +9,9 @@ pytesseract
 Pillow
 opencv-python-headless
 pymupdf-layout==1.26.6
-deep-translator
 langdetect
 langid
-
+pdfplumber
+semantic-text-splitter
+tokenizers
+numpy
